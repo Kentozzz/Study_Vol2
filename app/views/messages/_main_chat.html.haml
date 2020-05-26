@@ -1,0 +1,25 @@
+.mainchat
+  .header
+    .group
+      グループ
+      %ul.group__member
+        Member：
+        %li.group__group-user
+          Testさん
+    =link_to "#" do
+      .edit-btn Edit
+  .messages
+    .messages__user-name
+      Testさん
+      .messages__user-name__date
+        2020年01月01日00時00分
+    .messages__text
+      テストメッセージ
+
+  .form
+    = form_with  do |f|
+      = f.text_field :content, class: 'input-box-content', placeholder: 'type a message'
+      = f.label :image, class: 'image' do
+        = icon('fas', 'image')
+        = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'submit-btn'

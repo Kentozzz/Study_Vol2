@@ -1,0 +1,8 @@
+$color-white: #fff;
+$color-skyblue: #38AEF0;
+$color-darkgray: #434a54;
+$color-lightgray: #999;
+
+@mixin font-size($fSize: 12px) {
+  $fSize: $fSize;
+}
